@@ -5,22 +5,20 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Datatypes
-    int days = 30;
-    String other_name = "kc";
-    double pi = 3.14;
-    num day = 30; //can take int as well as double
-    bool isMale = true;
+    // Datatype
+    const int days = 30;
+    const String name = "kc";
 
-    var name = "kc";
-    const const_name = "kc";
-
-    return Material(
-      child: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Catalog App"),
+      ),
+      body: Center(
         child: Container(
             child: Text("Welcome to $days days of flutter by $name")
         ),
       ),
+      drawer: Drawer(),
     );
   }
 }
