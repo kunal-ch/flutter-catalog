@@ -11,17 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bringVegetables(carrybag: true);
     return MaterialApp(
-      home: HomePage()
+      home: HomePage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      darkTheme: ThemeData(brightness: Brightness.dark),
     );
-  }
-
-  // method
-  // {} means its optional
-  bringVegetables({int rupees=20, required bool carrybag}) {
-    // Take cycle
-    // Go to market
-    // Pay
   }
 }
